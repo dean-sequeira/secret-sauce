@@ -1,4 +1,4 @@
-# Secret Sauce
+# Secret Sauce 🥫
 
 ## Overview
 
@@ -33,9 +33,9 @@ library with bcrypt for hashing passwords, ensuring secure password storage and 
 
 ## Usage
 
-1. Import the `PasswordGenerator` class and `verify_password` function from `secret_sauce.py`:
+1. Import the `PasswordGenerator` and `PasswordVerifier` classes from `secret_sauce.py`:
     ```python
-    from secret_sauce import PasswordGenerator, verify_password
+    from secret_sauce import PasswordGenerator, PasswordVerifier
     ```
 
 2. Generate a password:
@@ -48,7 +48,8 @@ library with bcrypt for hashing passwords, ensuring secure password storage and 
 
 3. Verify a password:
     ```python
-    is_valid = verify_password(plain_password, hash_password)
+    verifier = PasswordVerifier(plain_password, hash_password)
+    is_valid = verifier.verify_password()
     print(f"Password is valid: {is_valid}")
     ```
 
