@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling", "passlib[bcrypt]~=1.7.4", "bcrypt==4.0.1"]
+build-backend = "hatchling.build"
+
+[project]
+name = "secret_sauce"
+version = "0.0.1"
+authors = [
+    { name = "Dean Sequeira" },
+]
+description = "Secret Sauce is a Python-based password generator that returns both plain text and hashed results. It uses the passlib library with bcrypt for hashing passwords, ensuring secure password storage and verification."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["passlib[bcrypt]~=1.7.4", "bcrypt==4.0.1"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/dean-sequeira/secret-sauce"
+Issues = "https://github.com/dean-sequeira/secret-sauce/issues"
